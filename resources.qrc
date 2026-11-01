@@ -1,0 +1,24 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/icons">
+        <!-- 工具栏图标 -->
+        <file>icons/xinjian.png</file>
+        <file>icons/baocun.png</file>
+        <file>icons/daoru.png</file>
+        <file>icons/shujupinggu.png</file>
+        <file>icons/chakanjieguo.png</file>
+        <file>icons/baobiaoxiazai.png</file>
+        <!-- 软件logo -->
+        <file>icons/weizhi.png</file>
+        
+        <!-- 项目树图标 -->
+        <file>icons/xiangmuguanli.png</file>
+        <file>icons/renwuliebiao.png</file>
+        <file>icons/shuju_shujuwenjian.png</file>
+        <file>icons/jizunwenjian.png</file>
+        <file>icons/pingguwenjian - .png</file>
+        <file>icons/jieguowenjian.png</file>
+        <file>icons/pinggujieguo.png</file>
+        <file>icons/baobiao.png</file>
+    </qresource>
+</RCC>

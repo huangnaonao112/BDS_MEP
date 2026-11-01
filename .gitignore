@@ -1,0 +1,40 @@
+# 构建产物
+/build*/
+/dist/
+/out/
+/out-*/
+*.o
+*.obj
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.lib
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+Makefile
+Makefile.*
+.qmake.stash
+.object_script.*
+
+# Qt Creator / IDE
+*.pro.user
+*.pro.user.*
+.qtcreator/
+.vscode/
+.idea/
+CMakeLists.txt.user*
+
+# 运行期数据（由应用生成的项目目录、临时输出）
+/11/
+/tmp/
+*.log
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

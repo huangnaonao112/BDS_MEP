@@ -1,0 +1,6 @@
+case,ms,points
+first_frame,0.476,200000
+cached_frame,0.153,200000
+drag_frame,0.405,200000
+settle_frame,7.611,200000
+anim_paint_interval,16.000,200000

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GNSS 数据评估系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/weizhi.png</normaloff>:/icons/weizhi.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #f0f0f0;
+}
+
+QMenuBar {
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #cccccc;
+}
+
+QMenuBar::item {
+    padding: 4px 8px;
+    background-color: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #d0d0d0;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="handleWidth">
+       <number>2</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+
+      <property name="styleSheet">
+       <string>QSplitter::handle {
+    background-color: #cccccc;
+    border: 1px solid #999999;
+}</string>
+      </property>
+      <widget class="QSplitter" name="topSplitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="handleWidth">
+         <number>2</number>
+        </property>
+        <property name="childrenCollapsible">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string>QSplitter::handle {
+    background-color: #cccccc;
+    border: 1px solid #999999;
+}</string>
+        </property>
+       <widget class="ProjectTreeWidget" name="projectTreeWidget">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QTreeWidget {
+    border: 2px solid #999999;
+    background-color: #ffffff;
+    alternate-background-color: #f8f8f8;
+    font-size: 12px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+QTreeWidget::item {
+    padding: 5px 5px 5px 0px;
+    border-bottom: 1px solid #eeeeee;
+    margin-left: 0px;
+}
+
+QTreeWidget::item:selected {
+    background-color: #e6f3ff;
+    color: #000000;
+}
+
+QTreeWidget::item:hover {
+    background-color: #f5f5f5;
+}
+
+QTreeWidget::branch {
+    background-color: transparent;
+    margin-left: 0px;
+}
+
+QTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget::branch:closed:has-children:has-siblings {
+    border-image: none;
+    image: url(:/icons/branch_closed.png);
+}
+
+QTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget::branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(:/icons/branch_open.png);
+}</string>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="viewStackedWidget">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QStackedWidget {
+    border: 2px solid #999999;
+}</string>
+        </property>
+        <widget class="FileTableView" name="fileTableView"/>
+        <widget class="ReportPreview" name="reportPreview"/>
+        <widget class="QTextEdit" name="reportTextEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string>QTextEdit {
+    background-color: #ffffff;
+    font-family: Courier New, Consolas, monospace;
+    font-size: 12px;
+    padding: 10px;
+}</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="DebugOutput" name="debugOutputWidget">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string>QStatusBar {
+    background-color: #e0e0e0;
+    border-top: 1px solid #cccccc;
+    color: #333333;
+    font-size: 12px;
+}
+
+QStatusBar::item {
+    border: none;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ProjectTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>projecttreewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>FileTableView</class>
+   <extends>QWidget</extends>
+   <header>filetableview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ReportPreview</class>
+   <extends>QWidget</extends>
+   <header>reportpreview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DebugOutput</class>
+   <extends>QWidget</extends>
+   <header>debugoutput.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
